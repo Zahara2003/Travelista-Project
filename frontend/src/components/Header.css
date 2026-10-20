@@ -1,0 +1,163 @@
+.professional-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-top: 6px solid #cf4109; 
+  border-bottom: 1px solid #e3dccd;
+  box-shadow: 0 4px 20px rgba(46, 36, 28, 0.04);
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo img {
+  height: 65px;
+  object-fit: contain;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #4a3f35;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+  color: #c1440e;
+}
+
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c1440e;
+  transition: width 0.3s ease;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+.admin-link {
+  color: #c1440e !important;
+  background-color: #fff3ec;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-signup-btn {
+  background: #c1440e;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(193, 68, 14, 0.2);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.login-signup-btn:hover {
+  background: #a83a0c;
+  transform: translateY(-1px);
+}
+
+.user-profile-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #c1440e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Logout Button Updated to Orange Theme Style */
+.logout-btn {
+  background-color: transparent;
+  color: #c1440e;
+  border: 1px solid #c1440e;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c1440e;
+  color: white;
+  box-shadow: 0 2px 8px rgba(193, 68, 14, 0.25);
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #2e241c;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 900px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 89px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid #e3dccd;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: none;
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+}

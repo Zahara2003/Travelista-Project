@@ -1,0 +1,117 @@
+.split-login-container {
+  display: flex;
+  min-height: calc(100vh - 80px);
+  background-color: #fdfbf7;
+  font-family: "Inter", sans-serif;
+}
+
+.split-left-pane {
+  flex: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  color: white;
+}
+
+.overlay-content h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.overlay-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.overlay-content p {
+  font-size: 16px;
+  opacity: 0.9;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.split-right-pane {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-form-box {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(46, 36, 28, 0.08);
+  border: 1px solid #e3dccd;
+}
+
+.admin-icon-header {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.login-form-box h2 {
+  font-size: 24px;
+  color: #2e241c;
+  margin-bottom: 8px;
+}
+
+.login-form-box .subtitle {
+  font-size: 14px;
+  color: #8a7b6c;
+  margin-bottom: 30px;
+}
+
+.login-form-box label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a3f35;
+  margin-bottom: 8px;
+}
+
+.login-form-box input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e3dccd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+  background-color: #fdfbf7;
+}
+
+.login-form-box input:focus {
+  border-color: #c1440e;
+  background-color: white;
+}
+
+.split-login-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #c1440e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.split-login-btn:hover {
+  background-color: #a83a0c;
+}
+
+@media (max-width: 768px) {
+  .split-left-pane {
+    display: none;
+  }
+}

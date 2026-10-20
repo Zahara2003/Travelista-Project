@@ -1,0 +1,304 @@
+/* Google-ல் இருந்து அழகான Cursive Font-ஐ Import செய்தல் */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Homepage Main Container */
+.homepage-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 1. Hero Section - Full Height */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  background-color: #2e241c;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Blur நீக்கப்பட்டு தெளிவான இருண்ட நிழல் மட்டும் தரப்பட்டுள்ளது */
+  z-index: 2;
+}
+
+/* Center Aligned Content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cursive Text Design */
+.hero-cursive {
+  font-family: 'Dancing Script', cursive;
+  font-size: 38px;
+  color: #f4a261;
+  margin-bottom: 5px;
+  display: block;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+  font-size: 19px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hero-search-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+.hero-search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 20px;
+  font-size: 16px;
+  outline: none;
+  color: #2e241c;
+}
+
+.hero-search-box button {
+  background: #c1440e;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-search-box button:hover {
+  background: #a83a0c;
+}
+
+/* 2. About Section */
+.about-section {
+  padding: 80px 20px;
+  background-color: #fdfbf7;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-subtitle {
+  color: #c1440e;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #2e241c;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #6c5d53;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.primary-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #c1440e;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.primary-action-btn:hover {
+  background: #a83a0c;
+}
+
+/* About Section Images */
+.about-images {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img {
+  width: 48%; 
+  height: 380px; 
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(193, 68, 14, 0.15);
+}
+
+.about-img.img-2 {
+  margin-top: 0; 
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+/* 3. Features Section */
+.features-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid #e3dccd;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(46, 36, 28, 0.03);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: #2e241c;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #6c5d53;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-images {
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .features-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .hero-cursive {
+    font-size: 28px;
+  }
+}
