@@ -8,13 +8,12 @@ const Footer = () => {
     <footer className="professional-footer">
       <div className="footer-main-container">
         
-        {/* 1. Brand Section */}
         <div className="footer-brand-section">
           <Link to="/">
             <img src={logo} alt="Travelista" className="footer-logo" />
           </Link>
           <p className="footer-description">
-            Crafting memorable journeys and helping you discover the beauty of Akkaraipattu, one destination at a time.
+            Local Tourist Day-Visit Planner and Information System for Akkaraipattu, Eastern Province, Sri Lanka. Designed to help you explore the beauty of Akkaraipattu within a 25 km radius.
           </p>
           <div className="social-icons">
             <a href="#" className="social-circle">📘</a>
@@ -23,7 +22,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 2. Quick Links */}
         <div className="footer-links-group">
           <h4>Quick Links</h4>
           <ul>
@@ -34,37 +32,25 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* 3. Support & Policies */}
-        <div className="footer-links-group">
-          <h4>Support</h4>
+        <div className="footer-hotlines">
+          <h4>Emergency Hotlines</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Support</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><span>Tourism Police:</span> <strong>1912</strong></li>
+            <li><span>Free Ambulance:</span> <strong>1990</strong></li>
+            <li><span>Akkaraipattu Hospital:</span> <strong>+94 67 227 7222</strong></li>
+            <li><span>Akkaraipattu Police:</span> <strong>+94 67 227 7223</strong></li>
           </ul>
-        </div>
-
-        {/* 4. Newsletter */}
-        <div className="footer-newsletter">
-          <h4>Stay Updated</h4>
-          <p>Subscribe to our newsletter for the latest travel updates and hidden gems.</p>
-          <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit" className="newsletter-btn">Subscribe</button>
-          </form>
         </div>
 
       </div>
 
-      {/* Bottom Bar */}
       <div className="footer-bottom-bar">
         <div className="footer-bottom-content">
-          <p>© {new Date().getFullYear()} Travelista. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Travelista. Academic Project - University of Moratuwa (ITE2953).</p>
           <div className="footer-bottom-links">
-            <a href="#">Sitemap</a>
+            <a href="#sitemap">Sitemap</a>
             <span className="dot-separator">•</span>
-            <a href="#">Security</a>
+            <a href="#security">Security</a>
           </div>
         </div>
       </div>
